@@ -13,15 +13,55 @@
 <body>
 
 <%
-    String cookieValue = (String) request.getAttribute("cookieValue");
+    String name = (String) request.getAttribute("name");
+    String surname=  (String) request.getAttribute("surname");
+    String country = (String) request.getAttribute("country");
+    String age = (String) request.getAttribute("age");
+    String gender = (String) request.getAttribute("gender");
+    String creditCard = (String) request.getAttribute("creditCard");
 %>
 
-<h1>COOKIE <%=cookieValue%></h1>
+<%--<h1>COOKIE <%=cookieValue%></h1>--%>
 
-<form action="/setcookie" method="post">
-    Name of a Site: <input type="text" name="cookie_value">
-    <button>Set Site Name</button>
-</form>
+<%--<form action="/setcookie" method="post">--%>
+<%--    Name of a Site: <input type="text" name="cookie_value"> <br>--%>
+<%--    <button>Set Site Name</button>--%>
+<%--</form>--%>
+
+    <h1>Name: <%=name%></h1>
+    <h1>Surname: <%=surname%></h1>
+    <h1>Age: <%=age%></h1>
+    <h1>Country: <%=country%></h1>
+    <h1>Gender: <%=gender%></h1>
+    <h1>Credit Card: <%=creditCard%></h1>
+
+    <form action="/setcookie" method="post">
+
+        Name: <input type="text" name="name" > <br>
+        Surname: <input type="text" name="surname" > <br>
+        Age:
+        <select name="age">
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+        </select> <br>
+        Country:
+        <select name="country">
+            <option>Kazakhstan</option>
+            <option>Russia</option>
+            <option>USA</option>
+            <option>Italy</option>
+            <option>Paris</option>
+            <option>Japan</option>
+        </select> <br>
+        Gender: <input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female <br>
+        Credit Card: <input type="number" name="creditCard"> <br>
+
+        <button>Save</button>
+    </form>
 
 </body>
 </html>
