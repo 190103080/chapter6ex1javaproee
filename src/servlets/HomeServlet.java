@@ -14,12 +14,12 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = "Empty Name";
-        String surname = "Empty Surname";
-        String country = "Empty Country";
-        String age = "Empty Age";
-        String gender = "Empty Gender";
-        String creditCard = "Empty Credit Card";
+        String name = "";
+        String surname = "";
+        String country = "";
+        String age = "";
+        String gender = "";
+        String creditCard = "";
 
 
         Cookie[] cookies = request.getCookies();
